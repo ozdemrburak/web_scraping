@@ -3,7 +3,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
 import init_driver as id
-from  IPython.display import clear_output
 
 
 def data_scraping_product_names(url_list):
@@ -11,7 +10,6 @@ def data_scraping_product_names(url_list):
     display = 0
     for url in url_list:
         print(display)
-        clear_output(wait=True)
 
         driver = id.init_driver(url)
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, 'h3')))

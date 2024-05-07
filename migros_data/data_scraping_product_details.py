@@ -3,7 +3,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
 import init_driver as id
-from  IPython.display import clear_output
+
 
 
 def data_scraping(url_list):
@@ -18,7 +18,7 @@ def data_scraping(url_list):
     display = 0
     max_length = 0
     for url in url_list:
-        clear_output(wait=True)
+
         print(display)
         display += 1
 
